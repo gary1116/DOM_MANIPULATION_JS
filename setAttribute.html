@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set attribute in js</title>
+</head>
+<style>
+    .hero{
+        background-color: aqua;
+        height: 100px;
+        width: 100px;
+    }
+</style>
+<body>
+    <h1>Setting attribute in javascript</h1>
+
+    <input type="text" id="myInput" value="sample">
+
+
+</body>
+<script>
+//now we will change the value of that text(sample) using set Attribute in js 
+
+document.getElementById('myInput').setAttribute('value','John Doe');
+
+const newP = document.createElement('p');
+document.body.appendChild(newP);
+newP.textContent='This is added through JavaScript';
+
+
+
+const myElement = document.createElement('div');
+
+document.body.appendChild(myElement);
+myElement.setAttribute('class','hero');
+</script>
+</html>

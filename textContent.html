@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text content</title>
+</head>
+<body>
+    <h1>Text content in js</h1>
+    <p id="contentFiller">welcome!</p>
+    <p id="anotherContent"></p>
+</body>
+<script>
+    let content = document.getElementById('contentFiller');
+    content.textContent = 'this is textContent!';
+
+    alert(content.textContent);
+
+    let aC = document.getElementById('anotherContent');
+
+    aC.innerHTML = '<em>this is innerHtml.</em>'
+    //difference between innerhtml and textContent is that:-
+    // innerhtml you use tags andit will use them as actual tags provided they should be real tags accepted by html
+    //textContent will take everything as text even if you add tags it will consider that as text
+</script>
+</html>
