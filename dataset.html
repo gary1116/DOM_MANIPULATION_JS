@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="title">Dataset</h2>
+    <div data-name="domenic" data-start-coding-at="15" id="myDiv">
+        sample text
+    </div>
+</body>
+<script>
+const myDiv = document.getElementById('myDiv');
+console.log(myDiv.dataset);
+
+myDiv.dataset.name='Bob';
+myDiv.dataset.startCodingAt = 90;
+myDiv.removeAttribute('data-name');
+
+</script>
+</html>

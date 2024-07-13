@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class List</title>
+    <style>
+        .bold{font-weight: bold;}
+        .orange-bg{background-color: orange;}
+        .white-text{color: white;}
+        .big-font{font-size: 36px;}
+    </style>
+</head>
+<body>
+    <h2 id="title">Class List</h2>
+    <p id="myParagh"> yeah Mate</p>
+</body>
+<script>
+    const myParagh = document.getElementById('myParagh');
+
+    myParagh.classList.add('bold','big-font');
+    myParagh.classList.remove('bold');
+    myParagh.classList.replace('big-font', 'orange-bg');
+    myParagh.classList.toggle('orange-bg'); //toggle will add if it is not present otherwise it will remove if it is present.
+    myParagh.classList.toggle('orange-bg');
+    console.log(myParagh.classList.contains('white-text')); // to check if that specific class is present or not 
+
+</script>
+</html>

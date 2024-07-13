@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document fragment</title>
+</head>
+<body>
+    <h2 id=""Title>Document Fragment - practicing</h2>
+    <ul id="myList">
+
+    </ul>
+</body>
+<script>
+// document fragment is just like a virtual invisible HTML element
+
+//A DocumentFragment in JavaScript is a lightweight container for a portion of the document.
+//  It is a minimal document object that has no parent and is used to hold nodes temporarily.
+
+const myList = document.getElementById('myList');
+const docFrag = document.createDocumentFragment();
+
+let item1 = document.createElement('li');
+let item2 = document.createElement('li');
+
+item1.textContent = "Banana";
+item2.textContent = "apple";
+
+docFrag.appendChild(item1);
+docFrag.appendChild(item2);
+console.log(docFrag);
+// now once we move the objects inside DocumentFragment to the unordered list then 
+// the DocumentFragment will be empty as it is moved you can in the console.log of the last line 
+
+myList.appendChild(docFrag);
+console.log(docFrag);
+</script>
+</html>

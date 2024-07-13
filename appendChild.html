@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>append Child</title>
+</head>
+<body>
+
+    <ul id="mobileCompanies">
+        <li>Apple</li>
+    </ul>
+
+    
+</body>
+<script>
+//append child allows us to append a child element or a child node to a parent node or a parent element
+// above ul tag is the parent element and li tags are child elements 
+
+//parent element
+const myList = document.getElementById('mobileCompanies');
+
+
+//creating a child element
+// let newElement = document.createElement('li');
+// newElement.textContent = 'RedMi';
+
+
+// // appending child to parent 
+
+// myList.appendChild(newElement);
+
+
+const fruitList = ['Banana','Orange','apple','Lemon'];
+
+for(let fruits of fruitList){
+    let newItem = document.createElement('li');
+    newItem.textContent = fruits;
+
+    myList.appendChild(newItem)
+}
+</script>
+</html>
