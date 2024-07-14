@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>next Element Sibling</title>
+</head>
+<style>
+    nav{
+        padding: 15px;
+        font-weight: bold;
+        background-color: aquamarine;
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    body{
+        margin: 0;
+    }
+</style>
+<body>
+    <nav>
+        Navigation
+    </nav>
+    <title id="title">Next Element Sibling</title>
+
+    <ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul>
+    <ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul><ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul><ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul><ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul><ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul><ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul><ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul><ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul><ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul>
+    <ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul>
+    <ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul>
+    <ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul>
+    <ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul>
+    <ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul>
+    <ul id="myList">
+        <li>apples</li>
+        <li>banana</li>
+        <li>pears</li>
+    </ul>
+
+</body>
+<script>
+    const applesItem = document.querySelector("#myList > li:first-of-type");
+    console.log(applesItem);
+
+    const bananaItem = applesItem.nextElementSibling;
+
+    console.log(bananaItem);
+
+const nav = document.querySelector("nav");
+const belowNav = nav.nextElementSibling;
+
+belowNav.style.marginTop = nav.clientHeight+"px";
+
+// nav.clientHeight+"px"; this basically means the height of navbar + px which would be the margin top px 
+
+</script>
+
+</html>

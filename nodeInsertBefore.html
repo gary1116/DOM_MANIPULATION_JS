@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.insertBefore</title>
+</head>
+<body>
+    <h2 id="title">Node.insertBefore()</h2>
+    
+    <ul id="myList">
+        <li>apple</li>
+        <li id="orangeItem">orange</li>
+        <li>Pineapple</li>
+    </ul>
+
+
+</body>
+<script>
+    let myList = document.getElementById('myList');
+    let orangeItem = document.getElementById('orangeItem');
+
+    const pearsItem = document.createElement('li');
+    pearsItem.textContent='Pears';
+
+    myList.insertBefore(pearsItem,orangeItem);
+
+    //opposite to appendChild
+    function addToBeginning(parent,toInsert){
+        let firstChild = parent.firstChild;
+
+        parent.insertBefore(toInsert,firstChild);
+}
+console.log(myList.firstChild);
+addToBeginning(myList,orangeItem);
+</script>
+</html>

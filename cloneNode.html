@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone a Node</title>
+</head>
+<body>
+<title id="title">Node.cloneNode - Js dom</title>
+
+<ul id="myList">
+<li>Apples</li>
+<li>banana</li>
+<li>pears</li>
+</ul>
+
+</body>
+<script>
+const myList = document.getElementById('myList');
+
+const listChildern = myList.children;
+
+const bananaItem = listChildern[1];
+
+console.log(bananaItem);
+const bananaCopy = bananaItem.cloneNode(true);  
+//cloneNode(true) basically tells that node is a deep node which means that it will clone all the child nodes too 
+// for example in bananaItem parent node is <li></li> and child node is the text node is text banana so cloneNode(true) extracts both the parent and the child
+
+myList.appendChild(bananaCopy);
+
+</script>
+</html>

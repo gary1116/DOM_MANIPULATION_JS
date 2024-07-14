@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>outerHtml</title>
+</head>
+<style>
+div{
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    padding: 20px;
+}
+#dom{
+    font-style: italic;
+}
+</style>
+<body>
+
+    <h2 id="title">outerHtml js</h2>
+</body>
+<script>
+const h2Title = document.getElementById("title");
+console.log(h2Title.outerHTML);
+
+
+h2Title.outerHTML = "<div id='dom'>I've been changed!  outerHtml js</div>";
+</script>
+</html>

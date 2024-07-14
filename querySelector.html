@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h2>New Heading</h2>
+    <h2 id="title">what is Queryselector ?</h2>
+    <div id="container1">
+        <div class="box">container 1 box 1</div>
+
+    </div>
+    <div id="container2">
+        <div class="box">container 2 box 1</div>
+
+    </div>
+    
+</body>
+<script>
+    //query selector lets you find the first element that matches css selector
+
+    const container2 = document.querySelector("#container2")
+    const result = container2.querySelector(".box");
+    console.log(result);
+
+</script>
+</html>

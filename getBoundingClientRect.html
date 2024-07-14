@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get bounding Client Rect</title>
+    <style>
+
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(221, 221, 77);
+            border: 2px solid black
+        }
+
+    </style>
+</head>
+<body>
+    <title id="title">Element.getBoundingClientRect -js</title>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus neque nisi labore autem adipisci saepe, explicabo hic repellat amet ullam perferendis reiciendis incidunt obcaecati temporibus asperiores ea blanditiis rem quaerat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus neque nisi labore autem adipisci saepe, explicabo hic repellat amet ullam perferendis reiciendis incidunt obcaecati temporibus asperiores ea blanditiis rem quaerat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus neque nisi labore autem adipisci saepe, explicabo hic repellat amet ullam perferendis reiciendis incidunt obcaecati temporibus asperiores ea blanditiis rem quaerat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus neque nisi labore autem adipisci saepe, explicabo hic repellat amet ullam perferendis reiciendis incidunt obcaecati temporibus asperiores ea blanditiis rem quaerat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus neque nisi labore autem adipisci saepe, explicabo hic repellat amet ullam perferendis reiciendis incidunt obcaecati temporibus asperiores ea blanditiis rem quaerat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus neque nisi labore autem adipisci saepe, explicabo hic repellat amet ullam perferendis reiciendis incidunt obcaecati temporibus asperiores ea blanditiis rem quaerat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus neque nisi labore autem adipisci saepe, explicabo hic repellat amet ullam perferendis reiciendis incidunt obcaecati temporibus asperiores ea blanditiis rem quaerat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus neque nisi labore autem adipisci saepe, explicabo hic repellat amet ullam perferendis reiciendis incidunt obcaecati temporibus asperiores ea blanditiis rem quaerat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus neque nisi labore autem adipisci saepe, explicabo hic repellat amet ullam perferendis reiciendis incidunt obcaecati temporibus asperiores ea blanditiis rem quaerat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus neque nisi labore autem adipisci saepe, explicabo hic repellat amet ullam perferendis reiciendis incidunt obcaecati temporibus asperiores ea blanditiis rem quaerat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus neque nisi labore autem adipisci saepe, explicabo hic repellat amet ullam perferendis reiciendis incidunt obcaecati temporibus asperiores ea blanditiis rem quaerat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus neque nisi labore autem adipisci saepe, explicabo hic repellat amet ullam perferendis reiciendis incidunt obcaecati temporibus asperiores ea blanditiis rem quaerat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus neque nisi labore autem adipisci saepe, explicabo hic repellat amet ullam perferendis reiciendis incidunt obcaecati temporibus asperiores ea blanditiis rem quaerat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus neque nisi labore autem adipisci saepe, explicabo hic repellat amet ullam perferendis reiciendis incidunt obcaecati temporibus asperiores ea blanditiis rem quaerat.</p>
+
+    <div class="box"></div>
+</body>
+<script>
+const box = document.querySelector('div.box');
+console.log(box);
+
+const rect  = box.getBoundingClientRect();
+console.log(rect); //rect here contains the information about that box which we made
+
+
+window.addEventListener("scroll",function (){
+    if(box.getBoundingClientRect().top<window.innerHeight){
+        box.style.background = "orange";
+    }
+})
+
+</script>
+</html>
