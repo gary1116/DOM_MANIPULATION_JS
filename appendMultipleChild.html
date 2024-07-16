@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appending multiple child elements </title>
+</head>
+
+<body>
+    <h1 id="title">Append multiple children to a parent element</h1>
+
+    <ul id="myList">
+        <li>banana</li>
+    </ul>
+</body>
+<script>
+
+    const myList = document.querySelector('#myList');
+
+    function generateLi(text) {
+        const li = document.createElement('li');
+
+        li.textContent = text;
+        return li;
+    }
+
+    function appendLi(parent, children) {
+        children.forEach(element => {
+            parent.appendChild(element);
+        });
+    }
+
+    let items = [generateLi('apple'),generateLi('pears'),generateLi('orange')];
+    appendLi(myList,items);
+</script>
+
+</html>

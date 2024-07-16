@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>content for window parent property</title>
+</head>
+<body>
+<p id="paragh">
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam architecto eos, ut, eius earum vel tempore nobis iste nesciunt fugit ex, dolorem optio dignissimos porro perspiciatis consequatur fuga mollitia doloribus.
+</p>
+</body>
+<script>
+let parentDocument =window.parent.document;
+const parentHeading = parentDocument.getElementById("title");
+console.log(parentHeading);
+
+const paragh =document.getElementById('paragh');
+paragh.textContent = paragh.textContent+"...." +parentHeading.textContent;
+</script>
+</html>

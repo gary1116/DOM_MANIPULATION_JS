@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent vs InnerHtml</title>
+</head>
+<body>
+    <!-- both are used to add text content to an element tag -->
+    <h1 id="title">textContent vs innerHtml</h1>
+    <div id="my-div"></div>
+    <div id="anotherDiv"></div>
+    <div id="lastOne"></div>
+</body>
+<script>
+const myDiv = document.getElementById('my-div');
+myDiv.innerHTML = '<strong>Hey my name is <i style="color:red;">Gary</i></strong>';
+const anotherDiv = document.getElementById('anotherDiv');
+anotherDiv.textContent = '<strong>Hey my name is <i style="color:red;">Gary</i></strong>';
+const lastOne = document.querySelector('#lastOne');
+lastOne.textContent="told y'all this was the last one...";
+// in innerHTML you can add tags with content and js will consder those tags as actual html Element tags 
+// while in textContent it will consider everything as text in example shown above 
+</script>
+</html>
